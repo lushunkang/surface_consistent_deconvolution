@@ -30,6 +30,7 @@ trace_num1=每道数据个数=scd处理中的trace_num中的x；
 最后得到的结果保存在bin文件中，
 最后会掉用wigb这个画图程序；
 ![图片](https://github.com/lushunkang/surface_consistent_deconvolution/assets/65398312/0171e17f-1d7b-46e2-b625-5e90e73521d5)
-不知道，这个地表一致性反褶积最后的结果只是远端振幅被补上去了，但是震源附近到的振幅变低了
+不知道为什么，这个地表一致性反褶积最后的结果只是远端振幅被补上去了，但是震源附近到的振幅变低了。
+请大家提出修改意见，谢谢！！
 
 
