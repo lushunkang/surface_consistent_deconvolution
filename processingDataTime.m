@@ -4,7 +4,7 @@ clear;
 
 %每道有多少个数据
 trace_num1=752;
-trace_num = 752*2-1;
+trace_num = trace_num1*2-1;
 
 % 炮的起点
 num= 0;
