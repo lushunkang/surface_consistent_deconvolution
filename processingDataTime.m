@@ -4,7 +4,7 @@ clear;
 
 %每道有多少个数据
 trace_num1=752;
-trace_num = trace_num1*2-1;
+trace_num = 752*2-1;
 
 % 炮的起点
 num= 0;
@@ -70,40 +70,32 @@ for i = 1:nr;
     s_list_fft = s_list(:,seismic_data_num);
     s_dec = ifft(s_list_fft);
     s_dec = s_dec(1:trace_num1);
-    s_dec = 1./s_dec;
     %跑间距
     h_list_fft = h_list(:,seismic_data_num_data-i+nr);
     h_dec = ifft(h_list_fft);
-%     h_dec = h_dec(1:trace_num1);
+    h_dec = h_dec(1:trace_num1);
     % 检波器
     r_list_fft = r_list(:,i);
     r_dec = ifft(r_list_fft);
-%     r_dec = r_dec(1:trace_num1);
+    r_dec = r_dec(1:trace_num1);
 
     % 中心点
     e_list_fft = e_list(:,(seismic_data_num_data+i)-1);
     e_dec = ifft(e_list_fft);
-%     e_dec = e_dec(1:trace_num1);
+    e_dec = e_dec(1:trace_num1);
     
-%     [or_data_fft,a] = deconv(or_data_fft_or_len,r_dec);
-    or_data_fft = conv(or_data_fft_or_len,1.\r_dec);
+     [or_data_fft,a] = deconv(or_data_fft_or_len,r_dec);
 
-    or_data_fft = or_data_fft(1:trace_num);
-    or_data_fft = conv(or_data_fft_or_len,1.\h_dec);
+    or_data_fft_or_len(1:length(or_data_fft_or))= or_data_fft;
+    [or_data_fft,a] = deconv(or_data_fft_or_len,h_dec);
 
-%     or_data_fft = or_data_fft(1:trace_num);
-%     or_data_fft = conv(or_data_fft_or_len,1.\s_dec);
-
-%     or_data_fft_or_len(1:length(or_data_fft_or))= or_data_fft;
-%     [or_data_fft,a] = deconv(or_data_fft_or_len,h_dec);
-% 
-%     or_data_fft_or_len(1:length(or_data_fft_or))= or_data_fft;
-%     [or_data_fft,a] = deconv(or_data_fft_or_len,s_dec);
+    or_data_fft_or_len(1:length(or_data_fft_or))= or_data_fft;
+    [or_data_fft,a] = deconv(or_data_fft_or_len,s_dec);
 % 
 %     or_data_fft_or_len(1:length(or_data_fft_or))= or_data_fft;
 %     [or_data_fft,a] = deconv(or_data_fft_or_len,e_dec);
 
-    or_data_fft = or_data_fft;
+    or_data_fft = or_data_fft*10;
     map_data(:,i)=or_data_fft(1:trace_num1);
     map_data2(:,i)=map_data(1:trace_num1,i);
     fund_max_data(i)=max(seismic_data(:,i));
