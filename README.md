@@ -35,6 +35,6 @@ trace_num1=每道数据个数=scd处理中的trace_num中的x；
 ![图片](https://github.com/lushunkang/surface_consistent_deconvolution/assets/65398312/a30dee86-7a4b-49fb-ae1b-38c29ac0bcb6)
 
 不知道为什么，这个地表一致性反褶积最后的结果只是远端振幅被补上去了，但是震源附近到的振幅变低了。
-请大家提出修改意见，谢谢！！
+我的算法正确吗？请大家提出修改意见，谢谢！！
 
 
