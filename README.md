@@ -1,6 +1,9 @@
 # surface_consistent_deconvolution
 surface consistent deconvolution
+![图片](https://github.com/lushunkang/surface_consistent_deconvolution/assets/65398312/84e3a0dc-b03c-4f1b-98b3-106f9aabfb2e)
+
 这里使用的模型是一个长10000的模型，其中每隔100米放炮，检波点每隔10米一个，所以一共有1001个
+
 检波点，101个炮点，每炮所有的检波点都会接收到数据。
 
 首先需要在scd文件中求取各个地表一致性反褶积影响因素算子，
@@ -26,5 +29,7 @@ trace_num1=每道数据个数=scd处理中的trace_num中的x；
 其它参数和scd中一样
 最后得到的结果保存在bin文件中，
 最后会掉用wigb这个画图程序；
+![图片](https://github.com/lushunkang/surface_consistent_deconvolution/assets/65398312/0171e17f-1d7b-46e2-b625-5e90e73521d5)
+不知道，这个地表一致性反褶积最后的结果只是远端振幅被补上去了，但是震源附近到的振幅变低了
 
 
