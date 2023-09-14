@@ -1,4 +1,4 @@
-# surface_consistent_deconvolution
+# surface consistent deconvolution 地表一致性反褶积
 surface consistent deconvolution
 ![图片](https://github.com/lushunkang/surface_consistent_deconvolution/assets/65398312/84e3a0dc-b03c-4f1b-98b3-106f9aabfb2e)
 
